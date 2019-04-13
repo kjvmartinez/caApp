@@ -48,7 +48,7 @@ class ParticipantController extends Controller
         $participant->contactno = $request->input('contactno');
         $participant->save();
         
-        echo "Successfully added.";
+        return redirect()->route('participant.index');
 
     }
 
