@@ -86,7 +86,7 @@
                                     </li>
                                     <li><a data-toggle="tab" href="#mailbox"><i class="notika-icon notika-mail"></i> Attendance</a>
                                     </li>
-                                    <li><a data-toggle="tab" href="#about"><i class="notika-icon notika-mail"></i> About</a>
+                                    <li><a data-toggle="tab" href="#report"><i class="notika-icon notika-menu"></i> Report</a>
                                     </li>
                                 </ul>
                                 <div class="tab-content custom-menu-content">
@@ -103,6 +103,12 @@
                                             <li><a href="attendance/qrattendance">by QR Code</a>
                                             </li>
                                             <li><a href="attendance/nameattendance">by Name</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div id="report" class="tab-pane notika-tab-menu-bg animated flipInX">
+                                        <ul class="notika-main-menu-dropdown">
+                                            <li><a href="attendance/report">List Attendance</a>
                                             </li>
                                         </ul>
                                     </div>
