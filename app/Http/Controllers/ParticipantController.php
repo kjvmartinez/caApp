@@ -15,7 +15,9 @@ class ParticipantController extends Controller
      */
     public function index()
     {
-        $participants = Participant::paginate(20);
+        $participants = DB::table('participants')//Participant::paginate(20);
+        ->orderBy('created_at', 'desc')
+        ->paginate(20);
         return view('participant.participant')->with('participants',$participants);
     }
 
