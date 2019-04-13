@@ -18,6 +18,8 @@ Route::get('/', function () {
 Route::resource('participant','ParticipantController');
 Route::resource('attendance/nameattendance','ByNameController');
 
+Route::get('/attendance/report','ReportController@index');
+Route::get('/attendance/report/search','ReportController@search');
 Route::get('/search','ByNameController@search');
 Route::get('attendance/nameattendance', 'ByNameController@index');
 Route::get('attendance/qrattendance', 'AttendanceController@index');
