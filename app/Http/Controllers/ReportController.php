@@ -14,9 +14,8 @@ class ReportController extends Controller
         $participants = DB::table('participants')
         ->join('attendances','participants.idparticipants','=','attendances.participant_idparticipants')
         ->select('participants.*','attendances.logdatetime as logdatetime')
-        ->paginate(7);
-        //->get();
-        //$participants = Participant::paginate(20);
+        ->paginate(25);
+        
         return view('attendance.report')->with('participants',$participants);
     }
 

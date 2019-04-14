@@ -22,6 +22,13 @@ class DatabaseSeeder extends Seeder
                 'updated_at' => $faker->dateTime()->format('Y-m-d H:i:s'),
             ]);
         }
+
+        foreach(range(1,100) as $index){
+            DB::table('attendances')->insert([
+                'participant_idparticipants'=>$faker->numberBetween(1,100),
+                'logdatetime'=>$faker->dateTime()->format('Y-m-d H:i:s')
+            ]);
+        }
     }
 
     public function down()
