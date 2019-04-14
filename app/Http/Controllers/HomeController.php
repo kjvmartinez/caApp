@@ -21,7 +21,6 @@ class HomeController extends Controller
     {
 
         $input = $request->all();
-    //    return response()->json(['success'=>'Got Simple Ajax Request.']);
        return response()->json(['success'=>$request->id]);
     }
 }

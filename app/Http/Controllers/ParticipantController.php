@@ -15,9 +15,7 @@ class ParticipantController extends Controller
      */
     public function index()
     {
-        $participants = DB::table('participants')//Participant::paginate(20);
-        ->orderBy('created_at', 'desc')
-        ->paginate(20);
+        $participants = Participant::orderBy('created_at','desc')->paginate(20);
         return view('participant.participant')->with('participants',$participants);
     }
 
@@ -50,7 +48,7 @@ class ParticipantController extends Controller
         $participant->contactno = $request->input('contactno');
         $participant->save();
         
-        echo "Successfully added.";
+        return redirect()->route('participant.index');
 
     }
 
@@ -93,7 +91,7 @@ class ParticipantController extends Controller
         $participant->contactno = $request->input('contactno');
         $participant->save();
 
-        echo "Successfully updated.";
+        return redirect()->route('participant.index');
 
     }
 
@@ -106,6 +104,6 @@ class ParticipantController extends Controller
     public function destroy($id)
     {
         Participant::destroy($id);
-        echo "Successfully deleted!";
+        return redirect()->route('participant.index');
     }
 }
